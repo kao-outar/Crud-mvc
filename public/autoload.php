@@ -12,8 +12,8 @@ define("UPLOADS",ROOT_PATH.'public'.DS.'uploads'.DS);
 
 
 require_once(CONFIG.'config.php');
+require_once(CONFIG.'helpers.php');
 // configuration files 
-// require_once(CONFIG.'helpers.php');
 
 
 

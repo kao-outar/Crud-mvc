@@ -48,7 +48,7 @@
 
                 if(method_exists($controller,$this->action))
                 {
-                    echo "Method exist";
+                    // echo "Method exist";
                     call_user_func_array([$controller,$this->action],$this->params);
                 }
                 else

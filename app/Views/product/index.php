@@ -1,3 +1,4 @@
+<?php include(VIEWS.'inc/header.php');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,8 @@
 </head>
 <body>
     <ul>
-        <?php foreach($products as $prod):?>
+        <?php
+        foreach($products as $prod):?>
         <li><?php echo $prod['name'];?></li>
         <?php endforeach?>
     </ul> 

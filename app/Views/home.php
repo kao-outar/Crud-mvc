@@ -1,12 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title><?php echo $title; ?></title>
-</head>
-<body>
-    <h1>Hello world</h1>
-</body>
-</html>
+<?php include(VIEWS.'inc/header.php');?>
+
+    <div class="jumbotron text-center mt-5">
+        <h1 class="display-4">Learn PHP MVC</h1>
+        <p class="lead">bluh bluh</p>
+        <hr class="my-4">
+        <p>2 bluh bluh</p>
+        <a class="btn btn-primary btn-lg" href="<?php url('product')?>" role="button">Show Products</a>
+
+    </div>
+
+<?php include(VIEWS.'inc/footer.php');?>
