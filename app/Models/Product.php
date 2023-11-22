@@ -17,4 +17,9 @@ class Product extends DB
     {
         return $this->conn->get($this->table);
     }
+
+    public function insertProduct()
+    {
+        
+    }
 }
