@@ -28,4 +28,11 @@ class Product extends DB
         $db = $this->conn->where('id', $id);
         return $db->delete($this->table);
     }
+
+    public function getRow($id)
+    {
+        $db = $this->conn->where('id',$id);
+        return $db->getOne($this->table);
+
+    }
 }

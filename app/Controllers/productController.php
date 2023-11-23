@@ -42,6 +42,22 @@ class ProductController
         }
     }
 
+    //edit product
+    public function edit($id)
+    {
+        $db = new Product();
+        if($db->getRow($id))
+        {
+            $data['row'] = $db->getRow($id);
+           View::load("product/edit", $data);
+        }
+        else
+        {
+            echo "error";
+        }
+    }
+
+
     // delete product
     public function delete($id)
     {
