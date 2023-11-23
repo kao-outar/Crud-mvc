@@ -33,6 +33,12 @@ class Product extends DB
     {
         $db = $this->conn->where('id',$id);
         return $db->getOne($this->table);
+    }
+
+    public function updateProduct($id,$data)
+    {
+        $db = $this->conn->where('id',$id);
+        return $db->update($this->table,$data);
 
     }
 }

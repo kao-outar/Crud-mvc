@@ -56,7 +56,32 @@ class ProductController
             echo "error";
         }
     }
+    //update
+    public function update($id)
+    {
+        if(isset($_POST['submit']))
+        {
+            $name= $_POST['name'];
+            $price= $_POST['price'];
+            $description= $_POST['description'];
+            $qty= $_POST['qty'];
 
+            $dataInsert = Array ("name"=>$name,
+                            "price"=>$price,
+                            "description"=>$description,
+                            "qty"=>$qty,
+            );
+        $db = new Product();
+        if($db->updateProduct($id,$dataInsert))
+        {
+            View::load("product/edit",["success"=>"Data Updated Successfully", 'row'=>$db->getRow($id)]);
+        }
+        }
+        else
+        {
+            View::load("product/edit",['row'=>$db->getRow($id)]);
+        }
+    }
 
     // delete product
     public function delete($id)
