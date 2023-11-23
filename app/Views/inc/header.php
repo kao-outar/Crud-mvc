@@ -27,11 +27,11 @@
           <a class="nav-link" href="<?php url(); ?>">Home </a>
         </li>
         <li class="nav-item ">
-          <a class="nav-link" href="<?php url('product/index'); ?>"">Products</a>
+          <a class="nav-link" href="<?php url('product/index'); ?>">Products</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="<?php url('product/add'); ?>"">Add Product</a>
+          <a class="nav-link" href="<?php url('product/add'); ?>">Add Product</a>
         </li>
         
       </ul>
