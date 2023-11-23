@@ -23,8 +23,20 @@ class ProductController
             $description= $_POST['description'];
             $qty= $_POST['qty'];
 
-            echo $name . "----" .$price . "----". $description . "----". $qty;
+            $data = Array ("name"=>$name,
+                            "price"=>$price,
+                            "description"=>$description,
+                            "qty"=>$qty,
+            );
+        $db = new Product();
+        if($db->insertProduct($data))
+        {
+            View::load("product/add",["success"=>"Data Created Successfully"]);
         }
-        // View::load("product/add");
+        }
+        else
+        {
+            View::load("product/add");
+        }
     }
 }

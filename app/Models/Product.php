@@ -18,8 +18,8 @@ class Product extends DB
         return $this->conn->get($this->table);
     }
 
-    public function insertProduct()
+    public function insertProduct($data)
     {
-        
+        return $this->conn->insert($this->table,$data);
     }
 }

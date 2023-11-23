@@ -4,6 +4,10 @@
         <div class="row">
             <div class="col-8 mx-auto">
 
+            <?php if(isset($success)): ?>
+                    <h3 class="alert alert-success text-center"><?php  echo $success; ?></h3>
+                <?php endif; ?>
+                
 
                 <form class="p-5 border mb-5" method="POST" action="<?php url('product/store'); ?>">
                     <div class="form-group">
@@ -31,9 +35,3 @@
         </div>
     </div>
 <?php include(VIEWS.'inc/footer.php');?>
-<?php /*if(isset($success)): ?>
-                    <h3 class="alert alert-success text-center"><?php  echo $success; ?></h3>
-                <?php endif; ?>
-                <?php if(isset($error)): ?>
-                    <h3 class="alert alert-danger text-center"><?php  echo $error; ?></h3>
-                <?php endif;*/ ?>
