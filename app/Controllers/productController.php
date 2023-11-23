@@ -9,11 +9,13 @@ class ProductController
         $data['products'] = $db->getAllProducts();
         View::load('product/index',$data);
     }
-
+    //Add new product - view add page
     public function add()
     {
         View::load("product/add");
     }
+
+    //Get Data from form and store product info
     public function store()
     {
         if(isset($_POST['submit']))
@@ -37,6 +39,20 @@ class ProductController
         else
         {
             View::load("product/add");
+        }
+    }
+
+    // delete product
+    public function delete($id)
+    {
+        $db = new Product();
+        if($db->deleteProduct($id))
+        {
+            View::load('product/delete');
+        }
+        else
+        {
+            echo "error";
         }
     }
 }

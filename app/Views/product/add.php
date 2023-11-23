@@ -1,4 +1,4 @@
-<?php include(VIEWS.'inc/header.php');?>
+<?php include(VIEWS.'inc'.DS.'header.php');?>
 <h1 class="text-center my-5 py-3">Add New Products</h1>
 <div class="container">
         <div class="row">
@@ -34,4 +34,4 @@
             </div>
         </div>
     </div>
-<?php include(VIEWS.'inc/footer.php');?>
+<?php include(VIEWS.'inc'.DS.'footer.php');?>
